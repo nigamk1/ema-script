@@ -1,7 +1,7 @@
 from flask import Flask
 import threading
 import os
-import main
+import simple_bot
 
 app = Flask(__name__)
 
@@ -15,7 +15,7 @@ def health():
 
 def run_trading_bot():
     """Run the trading bot in a separate thread"""
-    main.main()
+    simple_bot.main()
 
 if __name__ == '__main__':
     # Start the trading bot in a background thread
